@@ -1,0 +1,47 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.chennai {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.date{
+    font-size: 20px;
+    color:grey;
+}
+.livescore1 {
+    margin-top: 50px;
+}
+.livescore1 .team {
+    font-size: 18px;
+    color:blue;
+    font-weight: bold;
+}
+.livescore1 span{
+    margin: 20px;
+}
+.livescore2 {
+    margin-top: 50px;
+}
+.livescore2 .team {
+    font-size: 18px;
+    color:blue;
+    font-weight: bold;
+}
+.livescore2 span{
+    margin: 20px;
+}
+.score {
+    background-color: rgb(166, 180, 192);
+    padding:1px;
+    width:300px;
+    height:150px;
+}
+.score p{
+    margin-top: 20px;
+}
+.sub-score1{
+    margin-top: 10px;
+}
