@@ -6,12 +6,19 @@
 }
 .score{
     font-size: 45px;
+    text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.contain {
+    text-align: center;
 }
 .sp1{
     font-size: 20px;
     margin-right: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.sp1:hover {
+    font-size: 25px;
 }
 .sp1 a{
    text-decoration: none;
@@ -145,6 +152,11 @@
     width:600px;
     padding-left: 10px;
     position: relative;
+    box-shadow: 0px 15px 20px 0px gray;
+}
+.scorecard:hover{
+    transform: scale(1.1);
+    margin-left: 30px;
 }
 .scorecard a{
     text-decoration: none;
@@ -176,7 +188,7 @@
 .icon {
     width:30px;
     height: 30px;
-    margin-left: 570px;
+    margin-left: 550px;
     position: absolute;
     margin-top: -80px;
 }
@@ -188,6 +200,9 @@
     font-size: 20px;
     margin-left: 1000px;
     margin-top: -810px;
+}
+.videos{
+    margin-top: 100px;
 }
 .if1{
     margin-left: 950px;

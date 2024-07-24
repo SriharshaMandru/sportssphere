@@ -12,7 +12,7 @@
     color:grey;
 }
 .livescore1 {
-    margin-top: 50px;
+    margin-top: 10px;
 }
 .livescore1 .team {
     font-size: 18px;
@@ -21,9 +21,11 @@
 }
 .livescore1 span{
     margin: 20px;
+    font-weight: bold;
 }
 .livescore2 {
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-left: 10px;
 }
 .livescore2 .team {
     font-size: 18px;
@@ -32,16 +34,124 @@
 }
 .livescore2 span{
     margin: 20px;
+    font-weight: bold;
 }
 .score {
     background-color: rgb(166, 180, 192);
     padding:1px;
     width:300px;
-    height:150px;
+    height:180px;
+    margin-top: 30px;
+    margin-left: 500px;
 }
 .score p{
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-size: 18px;
+    margin-left: 28px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.score h2{
+    font-size: 20px;
+    margin-left: 28px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.board{
+    display: flex;
+    background-color: aqua;
+    padding-left: 530px;
+    height:50px;
+    font-size: 23px;
+    margin-top: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.board p{
+    margin-top: 15px;
+    margin-right: 40px;
+    font-size: 23px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.board p:hover {
+    font-size: 25px;
+}
+.board a{
+    text-decoration: none;
+    color:green;
+}
+
+.summary h1 {
+   font-family: Arial, Helvetica, sans-serif;
+   margin-top: 10px;
+}
+.summary h3{
     margin-top: 20px;
 }
-.sub-score1{
+.summary p{
     margin-top: 10px;
+}
+
+
+
+.summary{
+    padding: 22px 30px;
+    border-radius: 10px;
+    line-height: 1.8;
+    margin-top: 50px;
+}
+
+#ch1{
+    display: none;
+}
+.content {
+    display:none;
+}
+#ch1:checked ~ .content{
+   display: block;
+}
+#ch1:checked ~ label{
+    display: none;
+ }
+.content label{
+    display: inline-block;
+    padding-left:3px;
+    margin-top: 12px;
+    cursor: pointer;
+    color:blue;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.summary label{
+    display: inline-block;
+    padding-left:3px;
+    margin-top: 12px;
+    cursor: pointer;
+    color:blue;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.tabs{
+    display:flex;
+    background-color: gray;
+    justify-content: space-between;
+    height:50px;
+    padding:10px;
+}
+.tabs div h1{
+    font-size: 30px;
+}
+
+.card{
+    width:60%;
+    margin-top: 10px;
+    margin-left: 250px;
+    border:2px solid black;
+}
+thead tr td{
+    font-weight: bold;
+}
+td{
+    border-bottom: 1px solid gray;
+    padding:10px;
 }
