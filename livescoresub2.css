@@ -10,6 +10,7 @@
     font-size: 35px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color:crimson;
+
 }
 .chennai {
     font-size: 30px;
@@ -33,7 +34,6 @@
 }
 .livescore2 {
     margin-top: 30px;
-    margin-left: 10px;
 }
 .livescore2 .team {
     font-size: 18px;
@@ -45,9 +45,9 @@
     font-weight: bold;
 }
 .score {
-    background-color: rgb(166, 180, 192);
+    background-color: rgb(146, 238, 195);
     padding:1px;
-    width:300px;
+    width:220px;
     height:180px;
     margin-top: 30px;
     margin-left: 500px;
@@ -66,7 +66,7 @@
 }
 .board{
     display: flex;
-    background-color: aqua;
+    background-color: rgb(12, 77, 77);
     padding-left: 530px;
     height:50px;
     font-size: 23px;
@@ -84,7 +84,7 @@
 }
 .board a{
     text-decoration: none;
-    color:green;
+    color:rgb(243, 245, 243);
 }
 
 .summary h1 {
@@ -139,63 +139,53 @@
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
 }
-.tabs-container{
-    display: flex;
+.brd{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    color:blueviolet;
 }
-.tabs{
-    background-color: gray;
+.board-teams {
+    width:60%;
+    background-color: rgb(63, 11, 63);
+    margin-left: 260px;
+    display: flex;
     justify-content: space-between;
-    height:50px;
-    padding:10px;
-    width:48%;
-    margin-left: 50px;
-
 }
-.tabs div h1{
-    font-size: 30px;
-}
-.tabs2{
-    background-color: gray;
-     justify-content: space-between;
-    height:50px;
-    padding:10px;
-    width:48%;
-    margin-top: 2px;
-    margin-left: 50px;
-}
-.tabs2 div h1{
-    font-size: 30px;
-}
-.table-container{
-    display: flex;
-}
-.card{
-    width:48%;
-    margin-top: 10px;
-    margin-left: 50px;
-    border:2px solid black;
-}
-thead tr td{
-    font-weight: bold;
-}
-td{
-    border-bottom: 1px solid gray;
-    padding:10px;
-}
-.tab2-container{
-    margin-left: 700px;
-    margin-top: -450px;
-}
-.card{
-    width:48%;
-    margin-top: 10px;
-    margin-left: 50px;
-    border:2px solid black;
-}
- thead tr td{
-    font-weight: bold;
-}
-td{
-    border-bottom: 1px solid gray;
-    padding:10px;
+.board-teams .tm1 img {
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left: 30px;
 } 
+.board-teams .tm1{
+    margin-left:80px;
+}
+.board-teams .tm1 p{
+    font-size: 25px;
+    color:white;
+    margin-left: 80px;
+    margin-top: 10px;
+}
+.board-teams .tm2{
+   margin-right: 100px;
+}
+.board-teams .tm2 img {
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left: 30px;
+} 
+.board-teams .tm2 p{
+    font-size: 25px;
+    color:white;
+    margin-left: 80px;
+    margin-top: 10px;
+}
+.scr{
+    margin-top: 100px;
+    font-size: 35px;
+    color:white;
+}
