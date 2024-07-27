@@ -3,7 +3,7 @@
    margin-top: 100px;
 }
 #text{
-    background: linear-gradient(to left, violet,indigo,blue,green,yellow,orange,red);
+    background: linear-gradient(to left,red,gray,violet,blue,green);
     background-clip: text;
     display: inline;
     margin-left: 400px;
@@ -22,32 +22,25 @@
     gap:500px;
   }
   .hotstar {
-    text-align: center;
+    margin-left: 550px;
     margin-top: 30px;
     color:blueviolet;
   }
   .jio {
-    text-align: center;
+    margin-left: 600px;
     margin-top: 30px;
     color:rgb(245, 16, 150);
   }
   .subscribe{
     display: flex;
-    gap: 280px;
+    gap: 230px;
     margin-left: 110px;
     margin-top: 40px;
   }
-  /* .free{
-    width:400px;
-    height:600px;
-    border:2px solid black;
-    border-radius: 30px;
-    background: linear-gradient(200deg,rgb(7, 7, 85),rgb(247, 238, 238),rgb(78, 23, 129));
-  } */
+  
   .subscribe .free {
-    width: 400px;
-    height: 600px;
-    border: 2px solid black;
+    width: 450px;
+    height: 700px;
     border-radius: 30px;
     display: inline-block; /* Changed from 'inline' to 'inline-block' for better alignment */
     color: transparent;
@@ -65,46 +58,90 @@
         background-position: 100% 100%;
     }
 }
+
  .subscribe .free h1{
-    margin-left: 120px;
+    margin-left: 140px;
     color:yellowgreen;
   }
  .subscribe .free img{
     width:100px;
     height:100px;
     border-radius: 50%;
-    margin-left:150px;
+    margin-left:160px;
   }
-   /* .premium{
-    width:400px;
-    height:600px;
-    border:2px solid black;
-    border-radius: 30px;
-    display: inline;
-    color:transparent;
-    background: linear-gradient(200deg,rgb(7, 7, 85),rgb(247, 238, 238),rgb(78, 23, 129));
-    animation-name: anime 3s linear infinite;
+  .subscribe .free .free-sub {
+    margin-top: 30px;
+    margin-left: 30px;
   }
-  @keyframes anime {
-    to{
-        background-position-x: 161px ;
-    }
-  }  */
+  .subscribe .free .free-sub i{
+    font-size: 30px;
+  }
+  .subscribe .free .free-sub span{
+    margin-left: 30px;
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
   .subscribe .premium h1{
-    margin-left: 100px;
+    margin-left: 120px;
     color:goldenrod;
   }
   .subscribe .premium img{
     width:100px;
     height:100px;
     border-radius: 50%;
-    margin-left:150px;
+    margin-left:170px;
   }
-
+  .subscribe .premium h2{
+    margin-left: 180px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .subscribe .premium p {
+    font-size: 20px;
+    margin-left: 180px;
+  }
+  .subscribe .free button {
+    width:180px;
+    height:50px;
+    margin-top: 80px;
+    border-radius: 10px;
+    border: none;
+    background-color: green;
+    color:white;
+    margin-left: 130px;
+    font-size: 18px;
+    box-shadow: 0px 5px 10px rgb(54, 54, 54);
+  }
+  .subscribe .premium .premium-sub {
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+  .subscribe .premium .premium-sub i{
+    font-size: 30px;
+  }
+  .subscribe .premium .premium-sub span{
+    margin-left: 30px;
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .subscribe .premium button {
+    width:180px;
+    height:50px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+    margin-left: 130px;
+    font-size: 18px;
+    box-shadow: 0px 5px 10px rgb(54, 54, 54);
+  }
+  .subscribe .premium button:hover {
+    width:190px;
+    height:60px;
+    font-size: 20px;
+  }
   .subscribe .premium {
-    width: 400px;
-    height: 600px;
-    border: 2px solid black;
+    width: 450px;
+    height: 700px;
     border-radius: 30px;
     display: inline-block; /* Changed from 'inline' to 'inline-block' for better alignment */
     color: transparent;
@@ -127,21 +164,14 @@
 
 .subscribe2{
     display: flex;
-    gap: 280px;
+    gap: 230px;
     margin-left: 110px;
     margin-top: 40px;
   }
-  /* .free{
-    width:400px;
-    height:600px;
-    border:2px solid black;
-    border-radius: 30px;
-    background: linear-gradient(200deg,rgb(7, 7, 85),rgb(247, 238, 238),rgb(78, 23, 129));
-  } */
+ 
   .subscribe2 .free {
-    width: 400px;
-    height: 600px;
-    border: 2px solid black;
+    width: 450px;
+    height: 700px;
     border-radius: 30px;
     display: inline-block; /* Changed from 'inline' to 'inline-block' for better alignment */
     color: transparent;
@@ -160,45 +190,93 @@
     }
 }
  .subscribe2 .free h1{
-    margin-left: 120px;
+    margin-left: 150px;
     color:yellowgreen;
   }
  .subscribe2 .free img{
     width:100px;
     height:100px;
     border-radius: 10px;
-    margin-left:150px;
+    margin-left:170px;
   }
-   /* .premium{
-    width:400px;
-    height:600px;
-    border:2px solid black;
-    border-radius: 30px;
-    display: inline;
-    color:transparent;
-    background: linear-gradient(200deg,rgb(7, 7, 85),rgb(247, 238, 238),rgb(78, 23, 129));
-    animation-name: anime 3s linear infinite;
+  .subscribe2 .free .free-sub {
+    margin-top: 30px;
+    margin-left: 30px;
   }
-  @keyframes anime {
-    to{
-        background-position-x: 161px ;
-    }
-  }  */
+  .subscribe2 .free .free-sub i{
+    font-size: 30px;
+  }
+  .subscribe2 .free .free-sub span{
+    margin-left: 30px;
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .subscribe2 .free button {
+    width:180px;
+    height:50px;
+    margin-top: 80px;
+    border-radius: 10px;
+    border: none;
+    background-color: green;
+    color:white;
+    margin-left: 130px;
+    font-size: 18px;
+    box-shadow: 0px 5px 10px rgb(54, 54, 54);
+  }
   .subscribe2 .premium h1{
-    margin-left: 100px;
+    margin-left: 120px;
+    color:goldenrod;
+  }
+  .subscribe2 .premium h1{
+    margin-left: 120px;
     color:goldenrod;
   }
   .subscribe2 .premium img{
     width:100px;
     height:100px;
     border-radius: 10px;
-    margin-left:150px;
+    margin-left:180px;
   }
+  .subscribe2 .premium h2{
+    margin-left: 190px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 
+  }
+  .subscribe2 .premium p {
+    font-size: 20px;
+    margin-left: 190px;
+  }
+  .subscribe2 .premium .premium-sub {
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+  .subscribe2 .premium .premium-sub i{
+    font-size: 30px;
+  }
+  .subscribe2 .premium .premium-sub span{
+    margin-left: 30px;
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .subscribe2 .premium button {
+    width:180px;
+    height:50px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+    margin-left: 130px;
+    font-size: 18px;
+    box-shadow: 0px 5px 10px rgb(54, 54, 54);
+  }
+  .subscribe2 .premium button:hover {
+    width:190px;
+    height:60px;
+    font-size: 20px;
+  }
   .subscribe2 .premium {
-    width: 400px;
-    height: 600px;
-    border: 2px solid black;
+    width: 450px;
+    height: 700px;
     border-radius: 30px;
     display: inline-block; /* Changed from 'inline' to 'inline-block' for better alignment */
     color: transparent;

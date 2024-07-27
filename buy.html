@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Now</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Buy Now Form</title>
+ <style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(40deg,blue,green);
+}
+
+.container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0px 5px 10px black;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#responseMessage {
+    margin-top: 20px;
+    text-align: center;
+}
+
+</style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Buy Now</h1>
+            <form id="buyNowForm">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                 <!-- <div class="form-group">
+                    <label for="product">Product:</label>
+                    <select id="product" name="product" required>
+                        <option value="" disabled selected>Select a product</option>
+                        <option value="product1">Free Plan</option>
+                        <option value="product2">Premium Plan</option>
+                         <option value="product3">Product 3</option> 
+                    </select>
+                </div>  -->
+                <!-- <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" required>
+                </div>  -->
+                <button type="submit">Buy Now</button>
+            </form>
+            <div id="responseMessage"></div>
+        </div>
+    
+        <script>
+              document.getElementById('buyNowForm').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+    
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+   
+    const response = document.getElementById('responseMessage');
+    
+
+   
+    
+    document.getElementById('responseMessage').innerHTML = `
+        <p>Thank you, ${name}! We will send a confirmation to ${email}.</p>
+    `;
+     response.style.color = 'red';
+    
+    document.getElementById('buyNowForm').reset();
+});
+
+</script>
+    </body>
+    </html>
+    
+</body>
+</html>
