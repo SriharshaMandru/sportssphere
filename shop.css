@@ -1,0 +1,228 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color:rgb(199, 144, 25);
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+#home h2{
+    text-align: center;
+    font-size: 30px;
+    color:rgb(76, 167, 76);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#home p{
+    text-align: center;
+    font-size: 25px;
+    color:#007bff;
+
+}
+.list a {
+    color: black;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.list a:hover {
+    text-decoration: none;
+    color:yellow;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 10px;
+    width:100px;
+    height:100px;
+}
+
+.product h3 {
+    margin: 15px 0 10px;
+}
+
+.product button {
+    background-color: rgb(167, 51, 167);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product button:hover {
+    background-color:olive;
+}
+
+.deal {
+    background-color: #e7f0ff;
+    border: 1px solid #007bff;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+.deal button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.deal button:hover {
+    background-color: #0056b3;
+}
+
+.review {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    transition-duration: 1s;
+    width:90%;
+    margin-left: 50px;
+}
+.review:hover {
+    transform:scale(1.1)
+}
+.review h3 {
+    margin: 0;
+}
+#checkout h2{
+    margin-left: 520px;
+}
+#checkoutForm {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 500px;
+    margin: auto;
+}
+
+#checkoutForm label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#checkoutForm input, #checkoutForm select, #checkoutForm textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+#checkoutForm p{
+    color:green;
+    font-size: 30px;
+    text-align: center;
+}
+#checkoutForm button {
+    background-color: crimson;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 180px;
+}
+
+#checkoutForm button:hover {
+    background-color: #0056b3;
+}
+
+#cart-items {
+    margin-bottom: 20px;
+}
+
+#total-price {
+    font-weight: bold;
+}
+
+
+
+/* Basic styling for the cart popup */
+.cart-popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+.cart-popup-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    max-height: 80%;
+    overflow-y: auto;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.cart-popup h2 {
+    margin-top: 0;
+}
+
+.cart-popup button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.cart-popup button:hover {
+    background-color: #0056b3;
+}

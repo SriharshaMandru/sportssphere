@@ -6,111 +6,296 @@
     <title>Sports Interest Groups</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        .heading {
+            color: green;
+            font-size: 55px;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .game-container1, .game-container2 {
+            display: flex;
+            gap: 60px;
+            margin-left: 200px;
+            margin-top: 50px;
+        }
+        .game {
+            padding: 20px;
+            width: 250px;
+            height: 170px;
+            background-color: white;
+            box-shadow: 0px 2px 8px 2px grey;
+            border-radius: 20px;
+        }
+        .game p {
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .game .para {
+            margin-top: 15px;
+            font-size: 16px;
+            color: rgb(109, 173, 12);
+        }
+        button {
+            margin-left: 50px;
+            margin-top: 30px;
+            padding: 0.5em 1em;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background:#ece2e2;
+        }
+        .feedback {
+            margin-left: 150px;
+            margin-top: 80px;
+            color:blue;
+        }
+        .poll {
+            position: absolute;
+            margin-top: 60px;
+            margin-left: 130px;
+            width: 400px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px 5px rgba(35, 30, 128, 0.05);
+        }
+        .poll .question {
+            padding: 20px;
+            color: #111;
+            font-size: 18px;
+            border-bottom: 1px solid #eee;
+        }
+        .poll .answers {
+            padding: 20px 20px 10px;
+        }
+        .poll .answers .answer {
+            position: relative;
+            width: 100%;
+            height: 40px;
+            padding: 0px 10px;
+            line-height: 40px;
+            color: #111;
+            margin-bottom: 10px;
+            border: 1px solid #d4d4d4;
+            border-radius: 10px;
+            cursor: pointer;
+            overflow: hidden;
 
-.heading{
-    color:green;
-    font-size: 55px;
+
+        }
+        .poll .answers .answer .selected {
+            border: 2px solid #8f9fe8;
+        }
+        .poll .answers .answer span.percentage-value {
+            position:absolute;
+            top: 50%;
+            right: 0px;
+            width: 40px;
+            transform: translateY(-50%);
+            color: #111;
+            font-size: 15px;
+
+        }
+        .poll .answers .answer span.percentage-bar {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 50%;
+            height: 100%;
+            background-color:#ccd8f1; 
+            transition: width 300ms ease-in-out;
+            z-index:-1;
+        }
+
+
+        .feedback2 {
+            margin-left: 800px;
+            margin-top: -20px;
+            color:rgb(111, 173, 18);
+        }
+        .polling {
+            position: absolute;
+            margin-top: 20px;
+            margin-left: 800px;
+            width: 400px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px 5px rgba(35, 30, 128, 0.05);
+        }
+        .polling .question {
+            padding: 20px;
+            color: #111;
+            font-size: 18px;
+            border-bottom: 1px solid #eee;
+        }
+        .polling .answers {
+            padding: 20px 20px 10px;
+        }
+        .polling .answers .answer {
+            position: relative;
+            width: 100%;
+            height: 40px;
+            padding: 0px 10px;
+            line-height: 40px;
+            color: #111;
+            margin-bottom: 10px;
+            border: 1px solid #d4d4d4;
+            border-radius: 10px;
+            cursor: pointer;
+            overflow: hidden;
+
+
+        }
+        .polling .answers .answer .selected {
+            border: 2px solid #8f9fe8;
+        }
+        .polling .answers .answer span.percentage-value {
+            position:absolute;
+            top: 50%;
+            right: 0px;
+            width: 40px;
+            transform: translateY(-50%);
+            color: #111;
+            font-size: 15px;
+
+        }
+        .polling .answers .answer span.percentage-bar {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 50%;
+            height: 100%;
+            background-color:#ccd8f1; 
+            transition: width 300ms ease-in-out;
+            z-index:-1;
+        }
+
+
+
+
+    .container {
+    max-width: 800px;
+    margin-top:450px;
+    margin-left: 280px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   }
+
+header {
     text-align: center;
 }
-.game-container1{
-    display:flex;
-    gap:60px;
-    margin-left: 150px;
-    margin-top: 50px;
+
+.discussion  {
+    color:rgb(161, 35, 161);
 }
-.game-container1 .game{
-    padding:20px;
-    width:250px;
-    height:170px;
-    box-shadow: 0px 2px 8px 2px grey;
-    border-radius: 20px;
+
+.post-form {
+    margin-bottom: 20px;
 }
-.game-container1 .game p{
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+
+label {
+    display: block;
+    margin: 10px 0 5px;
 }
-.game-container1 .game #para{
-    font-size: 18px;
-    color:rgb(109, 173, 12);
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
-.game-container1 button {
-    margin-left: 50px;
-    margin-top: 30px;
-    padding: 0.5em 1em;
+
+.container button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
     border: none;
-    background-color: #007bff;
-    color: white;
-    font-size: 1em;
+    border-radius: 4px;
     cursor: pointer;
-    border-radius: 5px;
-}
-.game-container1 button:hover {
-    background-color: #0056b3;
+    margin-left: 20px;
 }
 
-.game-container2{
-    display:flex;
-    gap:60px;
-    margin-left: 150px;
-    margin-top: 50px;
+.container button:hover {
+    background-color: #218838;
 }
-.game-container2 .game{
-    padding:20px;
-    width:250px;
-    height:170px;
-    box-shadow: 0px 2px 8px 2px grey;
-    border-radius: 20px;
+
+.posts {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
 }
-.game-container2 .game p{
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+
+.post {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
 }
-.game-container2 .game #para{
-    font-size: 16px;
-    color:rgb(109, 173, 12);
+
+.post h3 {
+    margin: 0 0 10px;
 }
-.game-container2 button {
-    margin-left: 50px;
-    margin-top: 30px;
-    padding: 0.5em 1em;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 5px;
-}
-.game-container2 button:hover {
-    background-color: #0056b3;
+
+.post p {
+    margin: 0;
 }
 
 
-*{
-    margin:0px;
-    padding:0px;
-    box-sizing: border-box;
-}
-body {
-     background:#f0f5ff;
-}
-.poll{
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    width:400px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px 5px rgba(35,30,128,0.05);
-}
-.poll .question {
-    padding:20px;
-    color:#111;
-    font-size:18px;
-    border-bottom:1px solid #eee;
+
+
+
+.container2 {
+  max-width: 800px;
+  margin-top: 900px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-   </style>
+.container2 h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:#007bff;
+}
+
+.event {
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.event:hover {
+  transform: scale(1.02);
+}
+
+.event h2 {
+  margin: 0;
+}
+
+.date {
+  color: #888;
+  font-size: 0.9em;
+}
+
+.details {
+  display: none;
+  margin-top: 10px;
+}
+    </style>
 </head>
 <body>
 
@@ -118,122 +303,293 @@ body {
 
     <div class="game-container1">
         <div class="game">
-             <p>Cricket</p>
-             <button id="btn">Join group</button>
-             <p id="para"></p>
+            <p>Cricket</p>
+            <button class="btn">Join group</button>
+            <p class="para"></p>
         </div>
-
         <div class="game">
             <p>Football</p>
-            <button id="btn">Join group</button>
-            <p id="para"></p>
-       </div>
-
-       <div class="game">
+            <button class="btn">Join group</button>
+            <p class="para"></p>
+        </div>
+        <div class="game">
             <p>Tennis</p>
-            <button id="btn">Join group</button>
-            <p id="para"></p>
-       </div>
+            <button class="btn">Join group</button>
+            <p class="para"></p>
+        </div>
     </div>
-    
 
     <div class="game-container2">
         <div class="game">
-             <p>Hockey</p>
-             <button id="btn">Join group</button>
-             <p id="para"></p>
+            <p>Hockey</p>
+            <button class="btn">Join group</button>
+            <p class="para"></p>
         </div>
-
         <div class="game">
-            <p>volley Ball</p>
-            <button id="btn">Join group</button>
-            <p id="para"></p>
+            <p>Volley Ball</p>
+            <button class="btn">Join group</button>
+            <p class="para"></p>
         </div>
-
-       <div class="game">
+        <div class="game">
             <p>Shuttle</p>
-            <button id="btn">Join group</button>
-            <p id="para"></p>
-       </div>
+            <button class="btn">Join group</button>
+            <p class="para"></p>
+        </div>
     </div>
 
-   
-
+    <h1 class="feedback">Polling On Teams</h1>
     <div class="poll">
         <div class="question"></div>
         <div class="answers"></div>
     </div>
-            
-<script>
-    const games = document.querySelectorAll(".game");
 
-    games.forEach(game => {
-        
-    const btn = game.querySelector("#btn");
-    const para = game.querySelector("#para");
-    btn.addEventListener("click",function(){
-    para.innerText = "You are added to this group"; 
+
+    <h1 class="feedback2">Polling On Sports</h1>
+    <div class="polling">
+        <div class="question"></div>
+        <div class="answers"></div>
+    </div>
+
+
+    <div class="container">
+        <header>
+            <h1 class="discussion">Sports Discussion Board</h1>
+        </header>
+        <main>
+            <section class="post-form">
+                <h2>Add a New Post</h2>
+                <form id="postForm">
+                    <label for="postTitle">Title:</label>
+                    <input type="text" id="postTitle" required>
+                    
+                    <label for="postContent">Content:</label>
+                    <textarea id="postContent" rows="4" required></textarea>
+                    
+                    <button type="submit">Post</button>
+                </form>
+            </section>
+
+            <section class="posts">
+                <h2>Posts</h2>
+                <div id="postsContainer">
+                </div>
+            </section>
+        </main>
+    </div>
+
+
+    <div class="container2">
+        <h1>Events and Meetups</h1>
+        <div class="event" onclick="toggleDetails(this)">
+          <h2>Fan Meetup in New York</h2>
+          <p class="date">August 20, 2024</p>
+          <div class="details">
+            <p>Join us in New York for an exciting fan meetup! Meet fellow fans, participate in activities, and enjoy the vibrant community atmosphere.</p>
+          </div>
+        </div>
+        <div class="event" onclick="toggleDetails(this)">
+          <h2>Community Event in San Francisco</h2>
+          <p class="date">September 15, 2024</p>
+          <div class="details">
+            <p>Our community event in San Francisco will feature guest speakers, workshops, and networking opportunities. Don't miss out!</p>
+          </div>
+        </div>
+
+        <div class="event" onclick="toggleDetails(this)">
+            <h2>Community Event in Italy</h2>
+            <p class="date">November 25, 2024</p>
+            <div class="details">
+              <p>Our community event in italy will feature guest speakers, workshops, and networking opportunities. Don't miss out!</p>
+            </div>
+        </div>
+
+        <div class="event" onclick="toggleDetails(this)">
+            <h2>Fan Meetup in Switzerland</h2>
+            <p class="date">August 20, 2024</p>
+            <div class="details">
+              <p>Join us in switzerland for an exciting fan meetup! Meet fellow fans, participate in activities, and enjoy the vibrant community atmosphere.</p>
+            </div>
+          </div>
+
+          <div class="event" onclick="toggleDetails(this)">
+            <h2>Community Event in India</h2>
+            <p class="date">October 18, 2024</p>
+            <div class="details">
+              <p>Our community event in India will feature guest speakers, workshops, and networking opportunities. Don't miss out!</p>
+            </div>
+        </div>
+      </div>
+<script>
+    document.querySelectorAll(".game").forEach(game => {
+    game.querySelector(".btn").addEventListener("click", function() {
+        game.querySelector(".para").innerText = "You are added to this group";
+    });
+});
+
+let poll = {
+    question: "What's your favourite team?",
+    answers: [
+        "India", "South Africa", "New Zealand", "Australia", "Zimbabwe"
+    ],
+    pollCount: 25,
+    answersWeight: [4, 4, 2, 10, 5],
+    selectedAnswer: -1
+};
+
+let pollDOM = {
+    question: document.querySelector(".poll .question"),
+    answers: document.querySelector(".poll .answers")
+};
+
+pollDOM.question.innerText = poll.question;
+pollDOM.answers.innerHTML = poll.answers.map(function(answer, i) {
+    return (`
+        <div class="answer" onclick="markAnswer(${i})">
+            <span class="percentage-bar"></span>
+            ${answer}
+            <span class="percentage-value"></span>
+        </div>
+    `);
+}).join("");
+
+function markAnswer(i) {
+    poll.selectedAnswer = i;
+
+    
+    document.querySelectorAll(".poll .answers .answer").forEach(answer => {
+        answer.classList.remove("selected");
+    });
+
+    document.querySelectorAll(".poll .answers .answer")[i].classList.add("selected");
+
+    
+    showResults();
+}
+
+function showResults() {
+    let answers = document.querySelectorAll(".poll .answers .answer");
+    answers.forEach((answer, i) => {
+        let percentage = 0;
+        if (i === poll.selectedAnswer) {
+            percentage = Math.round((poll.answersWeight[i] + 1) * 100 / (poll.pollCount + 1));
+        } else {
+            percentage = Math.round(poll.answersWeight[i] * 100 / (poll.pollCount + 1));
+        }
+        answer.querySelector(".percentage-bar").style.width = percentage + "%";
+        answer.querySelector(".percentage-value").innerText = percentage + "%";
+    });
+}
+
+
+
+
+
+
+
+document.querySelectorAll(".game").forEach(game => {
+    game.querySelector(".btn").addEventListener("click", function() {
+        game.querySelector(".para").innerText = "You are added to this group";
     });
 });
 
 
 
-    // let poll = {
-    //     question:"what's your favourite team?",
-    //     answers:[
-    //         "India", "Sounth Africa", "Newzland","Australia","Zimbombay"
-    //     ],
-    //     pollCount:20,
-    //     answersWeght:[4,4,2,10],
-    //     selectedAnswer:-1;
-    // };
+let polling = {
+        question: "What's your favourite sports?",
+        answers: ["Cricket", "Foot Ball", "Tennis", "Volley Ball", "Shuttle"],
+        pollingCount: 25,
+        answersWeight: [8, 8, 2, 7, 1],
+        selectedAnswer: -1
+    };
 
-    // let pollDOM = {
-    //     question:document.querySelector(".poll .question"),
-    //     answer:document.querySelector(".poll .answers")
-    // };
+    let pollingDOM = {
+        question: document.querySelector(".polling .question"),
+        answers: document.querySelector(".polling .answers")
+    };
 
-    // pollDOM.question.innerText = poll.question;
-    // pollDOM.answers.innerHTML = poll.answer.map(function(answer,i){
-    //     return(
-    //         `<div class="answer" onclick="markAnswer('${i}')">
-    //            ${answer}
-    //            <span class="percentage-bar"></span>
-    //            <span class="percentage-value"></span>
-    //         </div>`
-    //     );
-    // }).join("");
+    pollingDOM.question.innerText = polling.question;
+    pollingDOM.answers.innerHTML = polling.answers.map((answer, i) => `
+        <div class="answer" onclick="markPollingAnswer(${i})">
+            <span class="percentage-bar"></span>
+            ${answer}
+            <span class="percentage-value"></span>
+        </div>
+    `).join("");
 
-    // function markAnswer(i){
-    //     poll.selectedAnswer = +i;
-    //     try{
-    //         document.querySelector(".poll .answers .answer .selected").classList.remove("selected");
-    //     } catch(msg){}
-    //     document.querySelectorAll(".poll .answers .amswer")[+i].classList.add("selected");
-    //     showResults();
-    // }
-   
-    // function showResults(){
-    //     let answers = document.querySelectorAll(".poll .answers .annswer");
-    //     for(let i=0;i<answers.length;i++){
-    //         let percentage = 0;
-    //         if(i == poll.selectedAnswer){
-    //             percentage = Math.round(
-    //                 (poll.answersWeight[i]+1)*100 / (poll.pollCount+1)
-    //             );
-    //         }else {
-    //               percentage = Math.round(
-    //                 (poll.answersWeight[i]) * 100 / (poll.pollCount+1)
-    //               );
-    //         }
-    //     answers[i].querySelector("percentage-bar").style.width = percentage + "%";
-    //     answer[i].querySelector("percentage-value").innerText = percentage +  "%";
-    //     }
-    // }
+    function markPollingAnswer(i) {
+        polling.selectedAnswer = i;
+
+        document.querySelectorAll(".polling .answers .answer").forEach(answer => {
+            answer.classList.remove("selected");
+        });
+
+        document.querySelectorAll(".polling .answers .answer")[i].classList.add("selected");
+
+        showPollingResults();
+    }
+
+    function showPollingResults() {
+        let answers = document.querySelectorAll(".polling .answers .answer");
+        answers.forEach((answer, i) => {
+            let percentage = Math.round(polling.answersWeight[i] * 100 / polling.pollingCount);
+            if (i === polling.selectedAnswer) {
+                percentage = Math.round((polling.answersWeight[i] + 1) * 100 / (polling.pollingCount + 1));
+            }
+            answer.querySelector(".percentage-bar").style.width = percentage + "%";
+            answer.querySelector(".percentage-value").innerText = percentage + "%";
+        });
+    }
 
 
 
+
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const postForm = document.getElementById('postForm');
+    const postsContainer = document.getElementById('postsContainer');
+
+    postForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const postTitle = document.getElementById('postTitle').value;
+        const postContent = document.getElementById('postContent').value;
+
+        if (postTitle && postContent) {
+            addPost(postTitle, postContent);
+            postForm.reset();
+        }
+    });
+
+    function addPost(title, content) {
+        const postDiv = document.createElement('div');
+        postDiv.className = 'post';
+
+        const postTitle = document.createElement('h3');
+        postTitle.textContent = title;
+
+        const postContent = document.createElement('p');
+        postContent.textContent = content;
+
+        postDiv.appendChild(postTitle);
+        postDiv.appendChild(postContent);
+
+        postsContainer.appendChild(postDiv);
+    }
+});
+
+
+
+function toggleDetails(eventElement) {
+  const details = eventElement.querySelector('.details');
+  if (details.style.display === 'block') {
+    details.style.display = 'none';
+  } else {
+    details.style.display = 'block';
+  }
+}
 </script>
-    
+
 </body>
 </html>
+

@@ -1,0 +1,217 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sports Merchandise Store</title>
+        <link rel="stylesheet" href="shop.css">
+    </head>
+    <body>
+        <header>
+            <h1>Sports Merchandise Store</h1>
+            <nav  class="list">
+                <a href="#products">Products</a>
+                <a href="#deals">Exclusive Deals</a>
+                <a href="#reviews">Product Reviews</a>
+                <a href="#checkout">Secure Checkout</a>
+            </nav>
+        </header>
+    
+        <main>
+            <section id="home">
+                <h2>Welcome to Our Store</h2>
+                <p>Find the best sports merchandise and memorabilia here!</p>
+            </section>
+    
+            <section id="products">
+                <h2>Products</h2>
+                <div class="product-container">
+                    <div class="product">
+                        <img src="images/bat.jpeg" alt="Cricket Bat">
+                        <h3>Cricket Bat</h3>
+                        <p>High-quality cricket bat. Perfect for any level of play.</p>
+                        <span>$99.99</span>
+                        <br></br>
+                        <button onclick="addToCart('Cricket Bat', 99.99)">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <img src="images/football.jpeg" alt="Football">
+                        <h3>Football</h3>
+                        <p>Durable football for all your games.</p>
+                        <span>$49.99</span>
+                        <br></br>
+                        <button onclick="addToCart('Football', 49.99)">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <img src="images/tennis.jpeg" alt="Tennis Racket">
+                        <h3>Tennis Racket</h3>
+                        <p>Lightweight tennis racket with excellent grip.</p>
+                        <span>$79.99</span>
+                        <br></br>
+                        <button onclick="addToCart('Tennis Racket', 79.99)">Add to Cart</button>
+                    </div>
+
+                    <div class="product">
+                        <img src="images/volleyball.jpeg" alt="Volley Ball">
+                        <h3>Volley Ball</h3>
+                        <p>Durable Volley Ball with excellent grip.</p>
+                        <span>$79.99</span>
+                        <br></br>
+                        <button onclick="addToCart('Volley Ball', 79.99)">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <img src="images/hockey.jpeg" alt="Hockey">
+                        <h3>Hockey Stick</h3>
+                        <p>Light weight Hockey Stick with excellent grip.</p>
+                        <span>$79.99</span>
+                        <br></br>
+                        <button onclick="addToCart('Hockey Stick', 79.99)">Add To Cart</button>
+            
+                    </div>
+                </div>
+            </section>
+    
+            <section id="deals">
+                <h2>Exclusive Deals</h2>
+                <div class="deal">
+                    <h3>Member Special: 20% Off on All Products!</h3>
+                    <p>Join our membership to avail of this exclusive discount. Sign up now and get special offers throughout the year.</p>
+                    <button onclick="showMembership()">Sign Up for Membership</button>
+                </div>
+            </section>
+    
+            <section id="reviews">
+                <h2>Product Reviews</h2>
+                <div class="review">
+                    <h3>Cricket Bat</h3>
+                    <p>"Excellent quality and great performance!" - John Doe</p>
+                    <p>Rating: ⭐⭐⭐⭐⭐</p>
+                </div>
+                <div class="review">
+                    <h3>Football</h3>
+                    <p>"Perfect for all types of play. Very durable!" - Jane Smith</p>
+                    <p>Rating: ⭐⭐⭐⭐</p>
+                </div>
+                <div class="review">
+                    <h3>Tennis Rocket</h3>
+                    <p>"Excellent quality and great performance!" - John Doe</p>
+                    <p>Rating: ⭐⭐⭐⭐</p>
+                </div>
+                <div class="review">
+                    <h3>Volley Ball</h3>
+                    <p>"Excellent quality and great performance!" - John Doe</p>
+                    <p>Rating: ⭐⭐⭐⭐⭐</p>
+                </div>
+                <div class="review">
+                    <h3>Hockey Stick</h3>
+                    <p>"Excellent quality and great performance!" - John Doe</p>
+                    <p>Rating: ⭐⭐⭐</p>
+                </div>
+            </section>
+    
+            <section id="checkout">
+                <h2>Secure Checkout</h2>
+                <form id="checkoutForm">
+                    <h3>Billing Information</h3>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required>
+                    <label for="payment">Payment Method:</label>
+                    <select id="payment" name="payment" required>
+                        <option value="credit">Credit Card</option>
+                        <option value="paypal">Debit Card</option>
+                        <option value="upi">UPI</option>
+                        <option value="upi">Net Banking</option>
+                    </select>
+                    <button type="submit">Complete Purchase</button>
+                </form>
+            </section>
+    
+    
+            
+
+
+
+            <div id="cart-popup" class="cart-popup">
+                <div class="cart-popup-content">
+                    <span class="close-btn" onclick="closeCartPopup()">&times;</span>
+                    <h2>Your Cart</h2>
+                    <div id="cart-items">
+                       
+                    </div>
+                    <p id="total-price">Total: $0.00</p>
+                    <button onclick="checkout()">Proceed to Checkout</button>
+                </div>
+            </div>
+        </main>
+    
+<script>
+    
+                    let cart = [];
+                    let totalPrice = 0;
+
+                    function addToCart(productName, price) {
+
+                        cart.push({ name: productName, price: price });
+                        totalPrice += price;
+
+                        
+                        updateCartDisplay();
+
+                        
+                        document.getElementById('cart-popup').style.display = 'flex';
+                    }
+
+                    function updateCartDisplay() {
+                        const cartItemsElement = document.getElementById('cart-items');
+                        const totalPriceElement = document.getElementById('total-price');
+
+                        
+                        cartItemsElement.innerHTML = '';
+
+
+                        cart.forEach(item => {
+                            const itemElement = document.createElement('div');
+                            itemElement.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+                            cartItemsElement.appendChild(itemElement);
+                        });
+
+                        
+                        totalPriceElement.textContent = `Total: $${totalPrice.toFixed(2)}`;
+                    }
+
+                    function closeCartPopup() {
+                        document.getElementById('cart-popup').style.display = 'none';
+                    }
+
+                    function checkout() {
+                        alert('Proceeding to checkout');
+                        closeCartPopup();
+                        window.location.href = "#checkout";
+                    }
+
+
+                    document.getElementById('checkoutForm').addEventListener('submit', function(event) {
+                        event.preventDefault();
+                        document.getElementById('checkoutForm').reset();
+                        cart = [];
+                        totalPrice = 0;
+                        updateCartDisplay();
+                        document.getElementById("checkoutForm").innerHTML=`<p>Thank You for purchasing.Visit Again!!!</p>`;
+                        
+                    });
+
+
+                    function showMembership() {
+                        alert('Thank you for your interest in our membership. We will be in touch with exclusive offers!');
+                        
+                    }  
+
+        </script>
+</body>
+</html>
+    
