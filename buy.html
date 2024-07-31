@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,10 +13,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Buy Now Form</title>
  <style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
     body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -32,6 +36,8 @@
     max-width: 400px;
     width: 100%;
     box-shadow: 0px 5px 10px black;
+    margin-top: 150px;
+    margin-left: 450px;
 }
 
 h1 {
@@ -55,7 +61,7 @@ input, select {
     border-radius: 4px;
 }
 
-button {
+#buyNowForm button {
     width: 100%;
     padding: 10px;
     border: none;
@@ -66,7 +72,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+#buyNowForm button:hover {
     background-color: #218838;
 }
 
@@ -75,9 +81,230 @@ button:hover {
     text-align: center;
 }
 
+
+
+.footer{
+        display: flex;
+        justify-content: space-evenly;
+        background-color: rgb(173, 16, 147);
+        height:400px;
+        margin-top: 100px;
+    }
+    .footer div {
+       margin-top: 40px;
+    }
+    .footer div ul li{
+        list-style: none;
+        font-size: 18px;
+        color:white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 400;
+        margin-top: 10px;
+    }
+    .footer div ul li:hover {
+        color:yellow;
+        font-size: 19px;;
+    }
+    .footer div ul a{
+        text-decoration: none;
+        color:black;
+    }
+    .footer div img{
+        width:200px;
+        height:80px;
+        border-radius: 20px;
+        margin-top: 40px;
+        margin-left: 20px;
+    }
+    .footer div ul .bold{
+        font-size: 22px;
+        color:white;
+        font-weight: bold;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .footer div p{
+        font-size: 30px;
+        margin-left: 30px;
+        color:rgb(200, 245, 38);
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .box input {
+        margin-top: 50px;
+        border-radius: 10px;
+        border:none;
+        outline:none;
+        border-bottom: 3px solid greenyellow;
+        color:white;
+        background-color: black;
+        width:300px;
+        height:40px;
+        font-size: 16px;
+        padding-left:20px;
+    }
+     .box button {
+        width:120px;
+        height:50px;
+        font-size: 20px;
+        background-color: greenyellow;
+        color:crimson;
+        border-radius: 10px;
+        border: none;
+    }
+    .box button:hover {
+        background-color: red;
+        color:white;
+    }
+    .box{
+        margin-top: -180px;
+        margin-left: 500px;
+    }
+
+
+
+    .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(131, 18, 106);
+  padding: 0 20px;
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar img {
+  width: 150px;
+  height: 60px;
+  border-radius: 20px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.navbar h1 {
+  color: white;
+  margin: 0;
+}
+
+.topics {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.topics li {
+  position: relative;
+}
+
+.topics a {
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  font-size:18px;
+  padding: 15px 8px;
+  display: flex;
+  align-items: center;
+}
+
+.topics a:hover {
+  color: orange;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: black;
+  width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown a {
+  padding: 12px 16px;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: white;
+  color: crimson;
+}
+
+.topics li:hover .dropdown {
+  display: block;
+}
+
+.btns{
+  margin-left: 80px;
+  display: flex;
+}
+.navbar button {
+  height: 35px;
+  width: 120px;
+  background-color: orange;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: 0;
+  margin-left: 10px; 
+  cursor: pointer;
+}
+
+.navbar button:hover {
+  background-color: rgb(20, 85, 105);
+  color: white;
+}
+
+
 </style>
     </head>
     <body>
+        <nav class="navbar">
+        
+            <img class="logo" src="images/footer.jpeg" width="100px">
+      
+      
+            <ul class="topics">
+                <li><a href="Homepage.html" target="_blank">Home</a></li>
+                <li><a href="livescore.html" target="_blank">Live Score</a></li>
+             
+               
+                <li>
+                    <a href="#">News</a>
+                    <div class="dropdown">
+                        <a href="" target="_blank">Updates</a>
+                        <a href="" target="_blank">Stats</a>
+                        <a href="" target="_blank">Event Calendar</a>
+                    </div>
+                </li>
+      
+                <li><a href="" target="_blank">Fantasy Sports </a></li>
+                <li><a href="" target="_blank">More</a>
+                    <div class="dropdown">
+                        <a href="Gallery.html" target="_blank">Gallery</a>
+                        <a href="" target="_blank">Privacy & security</a>
+                        <a href="commutatory.html" target="_blank">Community & Forums</a>
+      
+                    </div>
+                    <li><a href="Loginsingup.html" target="_blank">LogOut</a>
+                </li>
+               </ul>  
+         
+                
+                <div class="btns">
+              <a href="sub.html"><button >subscribe</button></a>
+               <a href="shop.html"><button >Shop</button></a>
+            </div>
+               
+        </nav>
+
+
+
         <div class="container">
             <h1>Buy Now</h1>
             <form id="buyNowForm">
@@ -89,24 +316,60 @@ button:hover {
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
                 </div>
-                 <!-- <div class="form-group">
-                    <label for="product">Product:</label>
-                    <select id="product" name="product" required>
-                        <option value="" disabled selected>Select a product</option>
-                        <option value="product1">Free Plan</option>
-                        <option value="product2">Premium Plan</option>
-                         <option value="product3">Product 3</option> 
-                    </select>
-                </div>  -->
-                <!-- <div class="form-group">
-                    <label for="quantity">Quantity:</label>
-                    <input type="number" id="quantity" name="quantity" min="1" required>
-                </div>  -->
+                 
                 <button type="submit">Buy Now</button>
             </form>
             <div id="responseMessage"></div>
         </div>
     
+
+
+        <div class="footer">
+            <div>
+                <ul>
+                    <a href=""><li class="bold">Main Pages</li></a>
+                    <a href=""><li>Home</li></a>
+                    <a href="livescore.html"><li>Live score</li></a>
+                    <a href=""><li>Events</li></a>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <a href=""><li class="bold">Products</li></a>
+                    <a href="shop.html"><li>shop</li></a>
+                    <a href="sub.html"><li>Subscription</li></a>
+                </ul>
+            </div>
+            <div><img src="images/footer.jpeg">
+                
+            </div>
+            <div>
+                <ul>
+                    <a href=""><li class="bold">Services</li></a>
+                    <a href=""><li>Login</li></a>
+                    <a href=""><li>signup</li></a>
+                    <a href=""><li>Privacy</li></a>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <a href=""><li class="bold">Details</li></a>
+                    <a href=""><li>Events Calender</li></a>
+                    <a href=""><li>Featured Sports</li></a>
+                    <a href="commutatory.html"><li>Community forum</li></a>
+                </ul>
+            </div>
+            </div>
+            <div class="box">
+            <input type="email" placeholder="Email" class="email">
+            <button class="button">Subscribe</button>
+            </div>
+            
+     
+        
+
+
+
         <script>
               document.getElementById('buyNowForm').addEventListener('submit', function(event) {
     event.preventDefault(); 
@@ -132,5 +395,10 @@ button:hover {
     </body>
     </html>
     
-</body>
-</html>
+
+
+
+
+
+
+  

@@ -9,11 +9,55 @@
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
+
+    <nav class="navbar">
+        
+        <img class="logo" src="images/footer.jpeg" width="100px">
+  
+  
+        <ul class="topics">
+            <li><a href="Homepage.html" target="_blank">Home</a></li>
+            <li><a href="livescore.html" target="_blank">Live Score</a></li>
+         
+           
+            <li>
+                <a href="#">News</a>
+                <div class="dropdown">
+                    <a href="" target="_blank">Updates</a>
+                    <a href="" target="_blank">Stats</a>
+                    <a href="" target="_blank">Event Calendar</a>
+                </div>
+            </li>
+  
+            <li><a href="" target="_blank">Fantasy Sports </a></li>
+            <li><a href="" target="_blank">More</a>
+                <div class="dropdown">
+                    <a href="Gallery.html" target="_blank">Gallery</a>
+                    <a href="" target="_blank">Privacy & security</a>
+                    <a href="commutatory.html" target="_blank">Community & Forums</a>
+  
+                </div>
+                <li><a href="Loginsingup.html" target="_blank">LogOut</a>
+            </li>
+           </ul>  
+     
+            
+            <div class="btns">
+          <a href="sub.html"><button >subscribe</button></a>
+           <a href="shop.html"><button >Shop</button></a>
+        </div>
+           
+    </nav>
+
+
+
+
+
+
     <h1 class="score">Live Scores</h1>
     <div class="contain">
-    <span class="sp1"><a href="livescore.html" >Live</a></span>
+    <span class="sp1"><a href="livescore.html">Live</a></span>
     <span class="sp1"><a href="recent.html" >Recent</a></span>
-    <!-- <span class="sp1"><a href="upcoming.html">Upcoming</a></span> -->
     </div>
     <hr>
 
@@ -68,11 +112,77 @@
    <div class="videos">
     <h1 class="feature">Match Highlights</h1>
     <iframe src="https://www.youtube.com/embed/mwVbht8qUlU?si=DKeThL4hgLXdzbnH" class="if1"></iframe> 
-
     <iframe src="https://www.youtube.com/embed/Ip3VRAV0PXw?si=zz8XjxYPCuzLrTTi" class="if2"></iframe>
     <iframe src="https://www.youtube.com/embed/HPOZImerPM4?si=EhImtIhyKnesSLwH" class="if3"></iframe>
     <iframe src="https://www.youtube.com/embed/WQdqgrWvy6g?si=LhFxu547FANeNwtA" class="if4"></iframe>
     <iframe src="https://www.youtube.com/embed/wZPnZzKJuFI?si=QTyisGHTyAJvAEkv" class="if5"></iframe>
     </div>
+
+
+    <div class="footer">
+        <div>
+            <ul>
+                <a href=""><li class="bold">Main Pages</li></a>
+                <a href=""><li>Home</li></a>
+                <a href="livescore.html"><li>Live score</li></a>
+                <a href=""><li>Events</li></a>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <a href=""><li class="bold">Products</li></a>
+                <a href="shop.html"><li>shop</li></a>
+                <a href="sub.html"><li>Subscription</li></a>
+            </ul>
+        </div>
+        <div><img src="images/footer.jpeg">
+            
+        </div>
+        <div>
+            <ul>
+                <a href=""><li class="bold">Services</li></a>
+                <a href=""><li>Login</li></a>
+                <a href=""><li>signup</li></a>
+                <a href=""><li>Privacy</li></a>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <a href=""><li class="bold">Details</li></a>
+                <a href=""><li>Events Calender</li></a>
+                <a href=""><li>Featured Sports</li></a>
+                <a href="commutatory.html"><li>Community forum</li></a>
+            </ul>
+        </div>
+        </div>
+        <div class="box">
+        <input type="email" placeholder="Email" class="email">
+        <button class="button">Subscribe</button>
+        </div>
+
+
+
+        <script>
+            const button = document.querySelector(".button");
+     
+     button.addEventListener("click", function() {
+         const box = document.querySelector(".email");
+         const emailValue = box.value.trim(); 
+         
+     
+         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+     
+         if (emailValue === "" || !emailRegex.test(emailValue)) {
+             box.value = "Please enter  Email";
+             box.style.paddingLeft = "10px"; 
+             box.style.color = "red";
+         } else {
+             box.value = "Thank you for subscription!!!";
+             box.style.paddingLeft = "40px";
+             box.style.color = "yellow";
+         }
+     });
+     
+         </script>
 </body>
 </html>

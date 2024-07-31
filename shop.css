@@ -1,3 +1,10 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
@@ -10,10 +17,16 @@ header {
     color: black;
     padding: 10px 20px;
     text-align: center;
+    margin-top: 70px;
+    position: fixed;
+    width:100%;
 }
 
 header h1 {
     margin: 0;
+}
+#home {
+    margin-top: 150px;
 }
 #home h2{
     text-align: center;
@@ -25,7 +38,6 @@ header h1 {
     text-align: center;
     font-size: 25px;
     color:#007bff;
-
 }
 .list a {
     color: black;
@@ -226,3 +238,186 @@ section {
 .cart-popup button:hover {
     background-color: #0056b3;
 }
+
+
+
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(173, 16, 147);
+    height:400px;
+    margin-top: 100px;
+  }
+  .footer div {
+   margin-top: 40px;
+  }
+  .footer div ul li{
+    list-style: none;
+    font-size: 18px;
+    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+  .footer div ul li:hover {
+    color:yellow;
+    font-size: 19px;;
+  }
+  .footer div ul a{
+    text-decoration: none;
+    color:black;
+  }
+  .footer div img{
+    width:200px;
+    height:80px;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-left: 20px;
+  }
+  .footer div ul .bold{
+    font-size: 22px;
+    color:white;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .footer div p{
+    font-size: 30px;
+    margin-left: 30px;
+    color:rgb(200, 245, 38);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  .box input {
+    margin-top: 50px;
+    border-radius: 10px;
+    border:none;
+    outline:none;
+    border-bottom: 3px solid greenyellow;
+    color:white;
+    background-color: black;
+    width:350px;
+    height:50px;
+    font-size: 16px;
+    padding-left:20px;
+  }
+  .box button {
+    width:150px;
+    height:50px;
+    font-size: 20px;
+    background-color: greenyellow;
+    color:crimson;
+    border-radius: 10px;
+    border: none;
+  }
+  .box button:hover {
+    background-color: red;
+    color:white;
+  }
+  .box{
+    margin-top: -180px;
+    margin-left: 450px;
+  }
+
+
+
+
+
+
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(131, 18, 106);
+    padding: 0 20px;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .navbar img {
+    width: 150px;
+    height: 60px;
+    border-radius: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  
+  .navbar h1 {
+    color: white;
+    margin: 0;
+  }
+  
+  .topics {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .topics li {
+    position: relative;
+  }
+  
+  .topics a {
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    font-size:18px;
+    padding: 15px 8px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .topics a:hover {
+    color: orange;
+  }
+  
+  .dropdown {
+    display: none;
+    position: absolute;
+    background-color: black;
+    width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    top: 100%;
+    left: 0;
+  }
+  
+  .dropdown a {
+    padding: 12px 16px;
+    display: block;
+  }
+  
+  .dropdown a:hover {
+    background-color: white;
+    color: crimson;
+  }
+  
+  .topics li:hover .dropdown {
+    display: block;
+  }
+  
+  .btns{
+    margin-left: 80px;
+    display: flex;
+  }
+  .navbar button {
+    height: 35px;
+    width: 120px;
+    background-color: orange;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: 0;
+    margin-left: 10px; 
+    cursor: pointer;
+  }
+  
+  .navbar button:hover {
+    background-color: rgb(20, 85, 105);
+    color: white;
+  }

@@ -189,3 +189,106 @@
     font-size: 35px;
     color:white;
 }
+
+
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(131, 18, 106);
+    padding: 0 20px;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .navbar img {
+    width: 150px;
+    height: 60px;
+    border-radius: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  
+  .navbar h1 {
+    color: white;
+    margin: 0;
+  }
+  
+  .topics {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .topics li {
+    position: relative;
+  }
+  
+  .topics a {
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    font-size:18px;
+    padding: 15px 8px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .topics a:hover {
+    color: orange;
+  }
+  
+  .dropdown {
+    display: none;
+    position: absolute;
+    background-color: black;
+    width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    top: 100%;
+    left: 0;
+  }
+  
+  .dropdown a {
+    padding: 12px 16px;
+    display: block;
+  }
+  
+  .dropdown a:hover {
+    background-color: white;
+    color: crimson;
+  }
+  
+  .topics li:hover .dropdown {
+    display: block;
+  }
+  
+  .btns{
+    margin-left: 80px;
+    display: flex;
+  }
+  .navbar button {
+    height: 35px;
+    width: 120px;
+    background-color: orange;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: 0;
+    margin-left: 10px; 
+    cursor: pointer;
+  }
+  
+  .navbar button:hover {
+    background-color: rgb(20, 85, 105);
+    color: white;
+  }
