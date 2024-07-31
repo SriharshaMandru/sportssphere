@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VolleyBall Premier League </title>
+    
+</head>
+<style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+} 
+.ipl{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 35px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:crimson;
+    margin-top: 100px;
+}
+.chennai {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.date{
+    font-size: 20px;
+    color:grey;
+}
+.livescore1 {
+    margin-top: 10px;
+}
+.livescore1 .team {
+    font-size: 18px;
+    color:blue;
+    font-weight: bold;
+}
+.livescore1 span{
+    margin: 20px;
+    font-weight: bold;
+}
+.livescore2 {
+    margin-top: 30px;
+}
+.livescore2 .team {
+    font-size: 18px;
+    color:blue;
+    font-weight: bold;
+}
+.livescore2 span{
+    margin: 20px;
+    font-weight: bold;
+}
+.score {
+    background-color: rgb(146, 238, 195);
+    padding:1px;
+    width:220px;
+    height:180px;
+    margin-top: 30px;
+    margin-left: 500px;
+}
+.score p{
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-size: 18px;
+    margin-left: 28px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.score h2{
+    font-size: 20px;
+    margin-left: 28px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.board{
+    display: flex;
+    background-color: rgb(12, 77, 77);
+    padding-left: 530px;
+    height:50px;
+    font-size: 23px;
+    margin-top: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.board p{
+    margin-top: 15px;
+    margin-right: 40px;
+    font-size: 23px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.board p:hover {
+    font-size: 25px;
+}
+.board a{
+    text-decoration: none;
+    color:rgb(243, 245, 243);
+}
+
+.summary h1 {
+   font-family: Arial, Helvetica, sans-serif;
+   margin-top: 10px;
+}
+.summary h3{
+    margin-top: 20px;
+}
+.summary p{
+    margin-top: 10px;
+}
+
+
+
+.summary{
+    padding: 22px 30px;
+    border-radius: 10px;
+    line-height: 1.8;
+    margin-top: 50px;
+}
+
+#ch1{
+    display: none;
+}
+.content {
+    display:none;
+}
+#ch1:checked ~ .content{
+   display: block;
+}
+#ch1:checked ~ label{
+    display: none;
+ }
+.content label{
+    display: inline-block;
+    padding-left:3px;
+    margin-top: 12px;
+    cursor: pointer;
+    color:blue;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.summary label{
+    display: inline-block;
+    padding-left:3px;
+    margin-top: 12px;
+    cursor: pointer;
+    color:blue;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.brd{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    color:blueviolet;
+}
+.board-teams {
+    width:60%;
+    background-color: rgb(63, 11, 63);
+    margin-left: 260px;
+    display: flex;
+    justify-content: space-between;
+}
+.board-teams .tm1 img {
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left: 30px;
+} 
+.board-teams .tm1{
+    margin-left:80px;
+}
+.board-teams .tm1 p{
+    font-size: 25px;
+    color:white;
+    margin-left: 80px;
+    margin-top: 10px;
+}
+.board-teams .tm2{
+   margin-right: 100px;
+}
+.board-teams .tm2 img {
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left: 30px;
+} 
+.board-teams .tm2 p{
+    font-size: 25px;
+    color:white;
+    margin-left: 80px;
+    margin-top: 10px;
+}
+.scr{
+    margin-top: 100px;
+    font-size: 35px;
+    color:white;
+}
+
+
+
+
+
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(173, 16, 147);
+    height:400px;
+    margin-top: 100px;
+}
+.footer div {
+   margin-top: 40px;
+}
+.footer div ul li{
+    list-style: none;
+    font-size: 18px;
+    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    margin-top: 10px;
+}
+.footer div ul li:hover {
+    color:yellow;
+    font-size: 19px;;
+}
+.footer div ul a{
+    text-decoration: none;
+    color:black;
+}
+.footer div img{
+    width:200px;
+    height:80px;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+.footer div ul .bold{
+    font-size: 22px;
+    color:white;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.footer div p{
+    font-size: 30px;
+    margin-left: 30px;
+    color:rgb(200, 245, 38);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+ .box input {
+    margin-top: 50px;
+    border-radius: 10px;
+    border:none;
+    outline:none;
+    border-bottom: 3px solid greenyellow;
+    color:white;
+    background-color: black;
+    width:350px;
+    height:50px;
+    font-size: 16px;
+    padding-left:20px;
+}
+ .box button {
+    width:150px;
+    height:50px;
+    font-size: 20px;
+    background-color: greenyellow;
+    color:crimson;
+    border-radius: 10px;
+    border: none;
+}
+.box button:hover {
+    background-color: red;
+    color:white;
+}
+.box{
+    margin-top: -180px;
+    margin-left: 450px;
+}
+
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(131, 18, 106);
+    padding: 0 20px;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar img {
+    width: 150px;
+    height: 60px;
+    border-radius: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.navbar h1 {
+    color: white;
+    margin: 0;
+}
+
+.topics {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.topics li {
+    position: relative;
+}
+
+.topics a {
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    font-size:18px;
+    padding: 15px 8px;
+    display: flex;
+    align-items: center;
+}
+
+.topics a:hover {
+    color: orange;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: black;
+    width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown a {
+    padding: 12px 16px;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: white;
+    color: crimson;
+}
+
+.topics li:hover .dropdown {
+    display: block;
+}
+
+.btns{
+    margin-left: 80px;
+    display: flex;
+}
+.navbar button {
+    height: 35px;
+    width: 120px;
+    background-color: orange;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: 0;
+    margin-left: 10px; 
+    cursor: pointer;
+}
+
+.navbar button:hover {
+    background-color: rgb(20, 85, 105);
+    color: white;
+}
+</style>
+<body>
+   <nav class="navbar">
+        
+      <img class="logo" src="images/footer.jpeg" width="100px">
+
+
+      <ul class="topics">
+          <li><a href="Homepage.html" target="_blank">Home</a></li>
+          <li><a href="livescore.html" target="_blank">Live Score</a></li>
+       
+         
+          <li>
+              <a href="#">News</a>
+              <div class="dropdown">
+                  <a href="" target="_blank">Updates</a>
+                  <a href="" target="_blank">Stats</a>
+                  <a href="" target="_blank">Event Calendar</a>
+              </div>
+          </li>
+
+          <li><a href="" target="_blank">Fantasy Sports </a></li>
+          <li><a href="" target="_blank">More</a>
+              <div class="dropdown">
+                  <a href="Gallery.html" target="_blank">Gallery</a>
+                  <a href="" target="_blank">Privacy & security</a>
+                  <a href="commutatory.html" target="_blank">Community & Forums</a>
+
+              </div>
+              <li><a href="Loginsingup.html" target="_blank">LogOut</a>
+          </li>
+         </ul>  
+   
+          
+          <div class="btns">
+        <a href="sub.html"><button >subscribe</button></a>
+         <a href="shop.html"><button >Shop</button></a>
+      </div>
+         
+  </nav>
+
+
+
+
+
+    <h1 class="ipl">VOLLEYBALL PREMIER LEAGUE</h1>
+      <h1 class="chennai">Europe Volleyball championship VS Australia volleyball League,<span class="date"> 22nd,july 2024 Today 4:00pm at Newyork, Met Life stadium</span></h1>
+      <div class="score">
+         <div class="livescore1">
+        <span class="team">ETC</span> 
+        <span>3 - 2</span>
+         </div>
+            <div class="livescore2">
+            <span class="team">ATL</span> 
+             <span>2 - 1</span>
+          </div>
+           <p>Player Of the match</p>
+           <h2>James Ferro</h2>
+       </div>
+
+    <div class="board">
+      <a href=""><p>Summary</p></a>
+      <a href=""><p>Score Board</p></a>
+    </div>
+  
+
+
+    <div class="summary">
+        <input type="checkbox" id="ch1">
+        <h1>SUMMARY</h1>
+        <h3>Meerja is back into the attack</h3>
+         <p>Meerja to Milind Kumar, General Considerations: collective participation in the phase of play, do they play on refence players? or not? Ball speed, willingness to  play the match or wait, do they use possession or verticalization or alternate them? where is numerical superiority sought? Layoff passes and supports, movements without ball.
+            Phase of low possession: starting action of the goalkeeper (long or short, with their hands or feet), initial speed of the game, conditions and features of the ball circulating of the defenders, who gets down to set the action? Is there a playmaker or a main reference player? Once he receives the ball how does he plays it? behaviour of the winger and of the midfielders.
+            of medium possession: Diamond formation? If any, for what purpose? Do they look for changes of play? Do the midfielders follow the ball trajectory? Who inserts in the middle and who moves inserting on the sidelines?
+            Phase of high possession: (finish and conclusion): Who finishes the action? Which are the codified playing plots? Which striker attacks in the depth? Which striker receives encountering?, who performs layoff passes? How they attack the goal on the cross? who is skilled at 1vs1?</p>
+        <h3>Ali Sheikh is back into the attack</h3>
+        <p>
+            The qualitative analysis of the phases of play of the opponent team but also of theirs adds credibility to the coach in front of the players.
+
+            Actually, the usual tactical meeting held before a match in which the special features of the opponent team are illustrated on a blackboard together with the weekly training sessions alone, are not exhaustive.
+            
+            The coach and his staff are required to extrapolate the more significant phases of the opponent team. Video clips should describe possession, non possession and dead ball phases; they should be shown in the days immediately preceding the match and should not last more than 6-7 minutes to avoid mental stress of the players.</p>
+         <div class="content">
+         <h3>Ankita Raina is back into the attack</h3>
+         <p>12.6
+            Ankita Rainato Savage, no run, full on off, pushed to covers
+            12.5
+            Ankita Rainato Savage, no run, short ball on off, a swing and a miss for Savage
+            12.4
+            Ankita Rainato Milind Kumar, 1 run, fuller on the pads, turned to mid-wicket
+            12.3
+            Ankita Rainato Milind Kumar, no run, good length outside off, beats the bat as Milind Kumar tried to run it down
+            12.2
+            Ankita Rainato Savage, 1 run, good length angling back in from the round, gets a thick inside edge towards square leg
+            12.1
+            Ankita Rainato Milind Kumar, 1 run, short onto the body, turned towards square leg for a single</p>
+
+            <h3>Calvin Savage comes to the crease</h3>
+            <p>Types: kick-off, throw-in, lateral free kick (medium and high), central free kick (medium and high) , corner and penalty kick, All types both in favour or against, distinguishing restarting from outgoing kicks.
+                Scheme and arrangement: numerical scheme, who is going to jump (from standing still or running), man marking or zonal marking? Who is positioned on the vertex? Who is outside? Who is on the pole? How many and which players are assigned to marking? Peculiarities?]</p>
+           
+            <h3>M Bracewell to Santner, THATS OUT!! Caught!!</h3>
+            <p>It should be pointed out that there is no end to improvement; the coach can isolate some single actions of an opponent player and put them in a dvd or pen drive to be delivered to the player that will contrast him during the match.
+
+                Vice-versa, the analysis of their own team’s performance objectifies individual performances, so that they are out of the question.</p>
+
+               <h3>Cristiano is back into the attack</h3>
+            <p>Soccer is one of the most popular sports globally, and the amount of soccer-related content worldwide, including video footage, audio commentary, team/player statistics, scores, and rankings, is enormous and rapidly growing. Consequently, the generation of multimodal summaries is of tremendous interest for broadcasters and fans alike, as a large percentage of audiences prefer to follow only the main highlights of a game. However, annotating important events and producing summaries often requires expensive equipment and a lot of tedious, cumbersome, manual labour. In this context, recent developments in Artificial Intelligence (AI) have shown great potential. The goal of this work is to create an automated soccer game summarization pipeline using AI. In particular, our focus is on the generation of complete game summaries in continuous text format with length constraints, based on raw game multimedia, as well as readily available game metadata and captions where applicable, using Natural Language Processing (NLP) tools along with heuristics.</h3>
+               <p>8.1
+                  Ayan Desai to Stoinis, out Caught by Klaasen!! Second wicket for Ayan Desai and it is a big one! A slower delivery wide
+                   and full outside off. Stoinis reaches out for a big extended drive. Hits it flat and hard, and Klaasen dives forward 
+                   from long-off to complete as superb catch. Another wicket down for TSK. Stoinis c Klaasen b Ayan Desai 11(9) [6s-1]</p>
+                  <label for="ch1">See less</label>
+            </div>
+            <label for="ch1">Read More</label>
+       </div>
+       
+       <p class="brd">Score Board</p>
+       <div class="board-teams">
+          <div class="tm1">
+               <img src="images/ecf.jpeg">
+                <p>ETL</p>
+          </div>
+          <div class="scr">
+            <p>3 - 0</p>
+           </div>
+           <div class="tm2">
+              <img src="images/atl.jpeg">
+              <p>ATL</p>
+           </div>
+       </div>
+     
+
+
+
+       <div class="footer">
+         <div>
+             <ul>
+                 <a href=""><li class="bold">Main Pages</li></a>
+                 <a href=""><li>Home</li></a>
+                 <a href="livescore.html"><li>Live score</li></a>
+                 <a href=""><li>Events</li></a>
+             </ul>
+         </div>
+         <div>
+             <ul>
+                 <a href=""><li class="bold">Products</li></a>
+                 <a href="shop.html"><li>shop</li></a>
+                 <a href="sub.html"><li>Subscription</li></a>
+             </ul>
+         </div>
+         <div><img src="images/footer.jpeg">
+             
+         </div>
+         <div>
+             <ul>
+                 <a href=""><li class="bold">Services</li></a>
+                 <a href=""><li>Login</li></a>
+                 <a href=""><li>signup</li></a>
+                 <a href=""><li>Privacy</li></a>
+             </ul>
+         </div>
+         <div>
+             <ul>
+                 <a href=""><li class="bold">Details</li></a>
+                 <a href=""><li>Events Calender</li></a>
+                 <a href=""><li>Featured Sports</li></a>
+                 <a href="commutatory.html"><li>Community forum</li></a>
+             </ul>
+         </div>
+         </div>
+         <div class="box">
+         <input type="email" placeholder="Email" class="email">
+         <button class="button">Subscribe</button>
+         </div>
+ 
+ 
+ 
+         <script>
+             const button = document.querySelector(".button");
+      
+      button.addEventListener("click", function() {
+          const box = document.querySelector(".email");
+          const emailValue = box.value.trim(); 
+          
+      
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      
+          if (emailValue === "" || !emailRegex.test(emailValue)) {
+              box.value = "Please enter  Email";
+              box.style.paddingLeft = "10px"; 
+              box.style.color = "red";
+          } else {
+              box.value = "Thank you for subscription!!!";
+              box.style.paddingLeft = "40px";
+              box.style.color = "yellow";
+          }
+      });
+      </script>
+<body>
+</html>
